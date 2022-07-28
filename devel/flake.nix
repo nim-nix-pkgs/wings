@@ -7,11 +7,11 @@
   inputs.flakeNimbleLib.type  = "github";
   inputs.flakeNimbleLib.inputs.nixpkgs.follows = "nixpkgs";
   
-  inputs.src-wings-v0_0_3-alpha.flake = false;
-  inputs.src-wings-v0_0_3-alpha.ref   = "refs/tags/v0.0.3-alpha";
-  inputs.src-wings-v0_0_3-alpha.owner = "binhonglee";
-  inputs.src-wings-v0_0_3-alpha.repo  = "wings";
-  inputs.src-wings-v0_0_3-alpha.type  = "github";
+  inputs.src-wings-devel.flake = false;
+  inputs.src-wings-devel.ref   = "refs/heads/devel";
+  inputs.src-wings-devel.owner = "binhonglee";
+  inputs.src-wings-devel.repo  = "wings";
+  inputs.src-wings-devel.type  = "github";
   
   inputs."stones".owner = "nim-nix-pkgs";
   inputs."stones".ref   = "master";
@@ -24,13 +24,13 @@
   outputs = { self, nixpkgs, flakeNimbleLib, ...}@deps:
   let 
     lib  = flakeNimbleLib.lib;
-    args = ["self" "nixpkgs" "flakeNimbleLib" "src-wings-v0_0_3-alpha"];
+    args = ["self" "nixpkgs" "flakeNimbleLib" "src-wings-devel"];
     over = if builtins.pathExists ./override.nix 
            then { override = import ./override.nix; }
            else { };
   in lib.mkRefOutput (over // {
     inherit self nixpkgs ;
-    src  = deps."src-wings-v0_0_3-alpha";
+    src  = deps."src-wings-devel";
     deps = builtins.removeAttrs deps args;
     meta = builtins.fromJSON (builtins.readFile ./meta.json);
   } );
