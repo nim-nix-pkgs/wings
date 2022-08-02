@@ -23,8 +23,9 @@
     },
     "nixpkgs": {
       "locked": {
-        "narHash": "sha256-sK1Ow//80EKE3bAF5d+2gB8vPXw6m5TBk3wSLHvdVe0=",
-        "path": "/nix/store/0yqgkbpmsk7ck4s34wk505sfdd9vils4-source",
+        "lastModified": 0,
+        "narHash": "sha256-BBeCZwZImtjP3oYy4WogkQYy5OxNyfNciVSc1AfZgLQ=",
+        "path": "/nix/store/z8fi1f38y14lmsyhnph1l98qr3r9x7wr-source",
         "type": "path"
       },
       "original": {
@@ -36,7 +37,7 @@
       "inputs": {
         "flakeNimbleLib": "flakeNimbleLib",
         "nixpkgs": "nixpkgs",
-        "src-wings-v0_0_5-alpha": "src-wings-v0_0_5-alpha",
+        "src-wings-devel": "src-wings-devel",
         "stones": "stones"
       }
     },
@@ -57,19 +58,19 @@
         "type": "github"
       }
     },
-    "src-wings-v0_0_5-alpha": {
+    "src-wings-devel": {
       "flake": false,
       "locked": {
-        "lastModified": 1596596141,
-        "narHash": "sha256-oVD7fbUYumAsxlmjb7pMcb7v3NQXQC48m4htONLixNs=",
+        "lastModified": 1659359271,
+        "narHash": "sha256-WbkArGbCuodEsadhRv9fvXw4KwSCMt12HlJLEJdFM0o=",
         "owner": "binhonglee",
         "repo": "wings",
-        "rev": "0b5b1ec0f290f32cc4440d53319a9ea874b903f4",
+        "rev": "499e33d6a9e1f20ec6c8b782d23bf4fc90607900",
         "type": "github"
       },
       "original": {
         "owner": "binhonglee",
-        "ref": "refs/tags/v0.0.5-alpha",
+        "ref": "refs/heads/devel",
         "repo": "wings",
         "type": "github"
       }
